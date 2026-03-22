@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARBENCH | Military AI Evaluation Framework</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Radar Background Animation -->
+    <div class="radar-overlay"></div>
+
+    <!-- Tactical Grid Background -->
+    <div class="tactical-grid"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">[WARBENCH]</span>
+                <span class="classification">UNCLASSIFIED // FOR PUBLIC RELEASE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#framework">Framework</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#models">Models</a></li>
+                <li><a href="#paper">Paper</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="status-badge">
+                    <span class="pulse-dot"></span>
+                    EVALUATION COMPLETE
+                </div>
+                <h1 class="hero-title">
+                    <span class="highlight">WARBENCH</span>
+                </h1>
+                <p class="hero-subtitle">
+                    A Comprehensive Benchmark for Evaluating LLMs in<br>
+                    <span class="highlight-text">Military Decision-Making</span>
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">136</span>
+                        <span class="stat-label">Historical Scenarios</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">9</span>
+                        <span class="stat-label">Models Evaluated</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">5</span>
+                        <span class="stat-label">Evaluation Dimensions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">69%</span>
+                        <span class="stat-label">Max Violation Rate</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#paper" class="btn btn-primary">
+                        <span class="btn-icon">↓</span>
+                        Download Paper
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="radar-scan"></div>
+                <div class="tactical-display">
+                    <div class="display-header">
+                        <span>TACTICAL ASSESSMENT IN PROGRESS</span>
+                    </div>
+                    <div class="display-content">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%"></div>
+                        </div>
+                        <div class="model-status">
+                            <div class="model-row completed">
+                                <span>Closed-Source APIs</span>
+                                <span class="status-indicator success">EVALUATED</span>
+                            </div>
+                            <div class="model-row completed">
+                                <span>Open-Source Large</span>
+                                <span class="status-indicator success">EVALUATED</span>
+                            </div>
+                            <div class="model-row completed">
+                                <span>Edge-Optimized Small</span>
+                                <span class="status-indicator success">EVALUATED</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Alert Banner -->
+    <div class="alert-banner">
+        <div class="container">
+            <span class="alert-icon">⚠</span>
+            <span class="alert-text">CRITICAL: All models exhibit non-trivial IHL compliance failures. Refusal rates decoupled from actual operational compliance.</span>
+        </div>
+    </div>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">SECTION 01</span>
+                <h2>Mission Overview</h2>
+            </div>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="card-icon">◈</div>
+                    <h3>Ecological Validity</h3>
+                    <p>136 exhaustive scenarios derived exclusively from post-WWII historical conflict data. Multi-source verification from Correlates of War, UCDP, and ICRC databases.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">◈</div>
+                    <h3>Legal Constraints</h3>
+                    <p>First benchmark to enforce hard International Humanitarian Law boundaries. Tests proportionality, distinction, and precautions in attack.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">◈</div>
+                    <h3>Edge Deployment</h3>
+                    <p>Evaluates real-world hardware constraints: 4-bit/8-bit quantization, time pressure, and tactical edge computing limitations.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">◈</div>
+                    <h3>Fog of War</h3>
+                    <p>Systematic information degradation testing: missing intelligence (20-80%) and contradictory reports from multiple sources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Framework Section -->
+    <section id="framework" class="section framework">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">SECTION 02</span>
+                <h2>Evaluation Framework</h2>
+            </div>
+
+            <div class="dimensions-container">
+                <div class="dimension-card active">
+                    <div class="dimension-header">
+                        <span class="dimension-number">D1</span>
+                        <h3>Baseline Tactical Competence</h3>
+                    </div>
+                    <p>Foundational assessment across operational environments, conflict types, and force asymmetries.</p>
+                    <div class="metric-display">
+                        <span class="metric-label">Terrain Types</span>
+                        <div class="metric-bars">
+                            <div class="bar-group">
+                                <span>Open/Desert</span>
+                                <div class="bar"><div class="bar-fill" style="width: 94%"></div></div>
+                            </div>
+                            <div class="bar-group">
+                                <span>Urban</span>
+                                <div class="bar"><div class="bar-fill" style="width: 80%"></div></div>
+                            </div>
+                            <div class="bar-group">
+                                <span>Mountain/Forest</span>
+                                <div class="bar"><div class="bar-fill" style="width: 81%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dimension-card">
+                    <div class="dimension-header">
+                        <span class="dimension-number">D2</span>
+                        <h3>Legal & Ethical Constraints</h3>
+                    </div>
+                    <p>IHL/LOAC compliance testing with expert-encoded rubrics and dual-annotation.</p>
+                    <div class="metric-display">
+                        <span class="metric-label">Top Compliance Scores</span>
+                        <div class="bar-group">
+                            <span>Claude Opus 4.6</span>
+                            <div class="bar"><div class="bar-fill success" style="width: 92%"></div></div>
+                        </div>
+                        <div class="bar-group">
+                            <span>GPT-5.4 Pro</span>
+                            <div class="bar"><div class="bar-fill success" style="width: 88.5%"></div></div>
+                        </div>
+                        <div class="bar-group">
+                            <span>Llama-3.2-3B</span>
+                            <div class="bar"><div class="bar-fill danger" style="width: 31%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dimension-card">
+                    <div class="dimension-header">
+                        <span class="dimension-number">D3</span>
+                        <h3>Edge Deployment</h3>
+                    </div>
+                    <p>Quantization impact analysis (16-bit → 4-bit) with 5-second tactical threshold.</p>
+                    <div class="metric-display">
+                        <span class="metric-label">4-bit Performance Cliff</span>
+                        <div class="bar-group">
+                            <span>Phi-3 Mini (16→4 bit)</span>
+                            <div class="bar"><div class="bar-fill danger" style="width: 12%"></div></div>
+                        </div>
+                        <div class="bar-group">
+                            <span>Legal Compliance Collapse</span>
+                            <div class="bar"><div class="bar-fill danger" style="width: 7.5%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dimension-card">
+                    <div class="dimension-header">
+                        <span class="dimension-number">D4</span>
+                        <h3>Fog of War</h3>
+                    </div>
+                    <p>Information degradation: missing data (20-80%) and contradictory intelligence.</p>
+                    <div class="metric-display">
+                        <span class="metric-label">Degradation at 60% Missing Info</span>
+                        <div class="bar-group">
+                            <span>Claude Opus 4.6</span>
+                            <div class="bar"><div class="bar-fill warning" style="width: 52%"></div></div>
+                        </div>
+                        <div class="bar-group">
+                            <span>Edge Models</span>
+                            <div class="bar"><div class="bar-fill danger" style="width: 8%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dimension-card">
+                    <div class="dimension-header">
+                        <span class="dimension-number">D5</span>
+                        <h3>Reasoning Chain-of-Thought</h3>
+                    </div>
+                    <p>Explicit reasoning architectures: standard vs. CoT mode comparison for safety alignment.</p>
+                    <div class="metric-display">
+                        <span class="metric-label">CoT Improvement</span>
+                        <div class="bar-group">
+                            <span>Avg DQ Improvement</span>
+                            <div class="bar"><div class="bar-fill success" style="width: 20%"></div></div>
+                        </div>
+                        <div class="bar-group">
+                            <span>Avg CS Improvement</span>
+                            <div class="bar"><div class="bar-fill success" style="width: 38%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alert Banner -->
+    <div class="alert-banner">
+        <div class="container">
+            <span class="alert-icon">⚠</span>
+            <span class="alert-text">CRITICAL: All models exhibit non-trivial IHL compliance failures. Refusal rates decoupled from actual operational compliance.</span>
+        </div>
+    </div>
+
+    <!-- Key Findings Section -->
+    <section class="section findings">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">SECTION 03</span>
+                <h2>Key Findings</h2>
+            </div>
+            <div class="findings-container">
+                <div class="finding-card critical">
+                    <div class="finding-badge">FINDING 1</div>
+                    <h3>Structural Brittleness</h3>
+                    <p>Current LLMs exhibit extreme structural brittleness in tactical reasoning. While demonstrating functional baseline competence in conventional, symmetric environments, model decision quality systematically collapses when subjected to complex terrain (urban/mountainous) or high force asymmetry.</p>
+                </div>
+                <div class="finding-card critical">
+                    <div class="finding-badge">FINDING 2</div>
+                    <h3>Legal Compliance Failure</h3>
+                    <p>Current LLMs fail to reliably respect IHL in tactical scenarios. Superficial alignment guardrails (i.e., refusal rates) are completely decoupled from actual operational compliance. Violations stem primarily from structural inability to identify contextual constraints.</p>
+                </div>
+                <div class="finding-card critical">
+                    <div class="finding-badge">FINDING 3</div>
+                    <h3>Edge Deployment Non-Viable</h3>
+                    <p>Current edge-optimized models are practically non-viable for real-time tactical deployment. Aggressive weight quantization fails the 5-second threshold while triggering catastrophic collapse in decision quality and legal compliance. Ethical guardrails degrade faster than reasoning.</p>
+                </div>
+                <div class="finding-card warning">
+                    <div class="finding-badge">FINDING 4</div>
+                    <h3>Fog of War Vulnerability</h3>
+                    <p>LLMs suffer severe performance degradation under both missing and contradictory intelligence. Rather than adapting with operational caution, models respond to contextual deficits through dangerous heuristic simplification.</p>
+                </div>
+                <div class="finding-card info">
+                    <div class="finding-badge">FINDING 5</div>
+                    <h3>CoT as Safety Safeguard</h3>
+                    <p>Explicit reasoning steps consistently improve both tactical decision quality (+0.02) and ethical alignment (+3.8% compliance). By forcing models to state constraints prior to decision-making, CoT serves as an effective structural safeguard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="section results">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">SECTION 04</span>
+                <h2>Performance Matrix</h2>
+            </div>
+            <div class="results-table-wrapper">
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Model Category</th>
+                            <th>Model</th>
+                            <th>Decision Quality</th>
+                            <th>Compliance Score</th>
+                            <th>CIR</th>
+                            <th>Refusal Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="category-row">
+                            <td rowspan="3">Closed-Source APIs</td>
+                            <td>Claude Opus 4.6</td>
+                            <td><span class="score excellent">0.84</span></td>
+                            <td><span class="score excellent">92.0%</span></td>
+                            <td><span class="score excellent">90.4%</span></td>
+                            <td>8.1%</td>
+                        </tr>
+                        <tr>
+                            <td>GPT-5.4 Pro</td>
+                            <td><span class="score excellent">0.79</span></td>
+                            <td><span class="score excellent">88.5%</span></td>
+                            <td><span class="score excellent">84.1%</span></td>
+                            <td>18.4%</td>
+                        </tr>
+                        <tr>
+                            <td>Gemini 3.1 Pro</td>
+                            <td><span class="score good">0.77</span></td>
+                            <td><span class="score good">85.0%</span></td>
+                            <td><span class="score good">82.5%</span></td>
+                            <td>10.3%</td>
+                        </tr>
+                        <tr class="category-row">
+                            <td rowspan="3">Open-Source Large</td>
+                            <td>DeepSeek-V3.2</td>
+                            <td><span class="score good">0.70</span></td>
+                            <td><span class="score good">82.2%</span></td>
+                            <td><span class="score good">78.3%</span></td>
+                            <td>4.4%</td>
+                        </tr>
+                        <tr>
+                            <td>Qwen3.5-397B-A17B</td>
+                            <td><span class="score good">0.68</span></td>
+                            <td><span class="score good">79.0%</span></td>
+                            <td><span class="score good">75.4%</span></td>
+                            <td>2.9%</td>
+                        </tr>
+                        <tr>
+                            <td>Llama-4-Maverick-17B</td>
+                            <td><span class="score moderate">0.64</span></td>
+                            <td><span class="score moderate">75.6%</span></td>
+                            <td><span class="score moderate">70.1%</span></td>
+                            <td>5.1%</td>
+                        </tr>
+                        <tr class="category-row">
+                            <td rowspan="3">Edge-Optimized Small</td>
+                            <td>Qwen3.5-4B</td>
+                            <td><span class="score poor">0.19</span></td>
+                            <td><span class="score critical">38.5%</span></td>
+                            <td><span class="score critical">30.2%</span></td>
+                            <td>0.7%</td>
+                        </tr>
+                        <tr>
+                            <td>Phi-3 Mini</td>
+                            <td><span class="score poor">0.21</span></td>
+                            <td><span class="score critical">35.0%</span></td>
+                            <td><span class="score critical">28.7%</span></td>
+                            <td>1.5%</td>
+                        </tr>
+                        <tr>
+                            <td>Llama-3.2-3B</td>
+                            <td><span class="score poor">0.17</span></td>
+                            <td><span class="score critical">31.0%</span></td>
+                            <td><span class="score critical">25.4%</span></td>
+                            <td>1.5%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Section -->
+    <section id="models" class="section models">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">SECTION 05</span>
+                <h2>Evaluated Models</h2>
+            </div>
+            <div class="models-grid">
+                <div class="model-category">
+                    <h3>Closed-Source APIs</h3>
+                    <ul class="model-list">
+                        <li><span class="model-name">Claude Opus 4.6</span><span class="model-provider">Anthropic</span></li>
+                        <li><span class="model-name">GPT-5.4 Pro</span><span class="model-provider">OpenAI</span></li>
+                        <li><span class="model-name">Gemini 3.1 Pro</span><span class="model-provider">Google</span></li>
+                    </ul>
+                </div>
+                <div class="model-category">
+                    <h3>Open-Source Large</h3>
+                    <ul class="model-list">
+                        <li><span class="model-name">DeepSeek-V3.2</span><span class="model-provider">DeepSeek</span></li>
+                        <li><span class="model-name">Qwen3.5-397B-A17B</span><span class="model-provider">Alibaba</span></li>
+                        <li><span class="model-name">Llama-4-Maverick-17B</span><span class="model-provider">Meta</span></li>
+                    </ul>
+                </div>
+                <div class="model-category">
+                    <h3>Edge-Optimized Small</h3>
+                    <ul class="model-list">
+                        <li><span class="model-name">Phi-3 Mini</span><span class="model-provider">Microsoft</span></li>
+                        <li><span class="model-name">Qwen3.5-4B</span><span class="model-provider">Alibaba</span></li>
+                        <li><span class="model-name">Llama-3.2-3B</span><span class="model-provider">Meta</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paper Section -->
+    <section id="paper" class="section paper">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">SECTION 06</span>
+                <h2>Research Paper</h2>
+            </div>
+            <div class="paper-content">
+                <div class="paper-info">
+                    <h3>WARBENCH: A Comprehensive Benchmark for Evaluating LLMs in Military Decision-Making</h3>
+                    <div class="paper-meta">
+                        <p><strong>Keywords:</strong> LLM Evaluation, Military AI, Ethical AI</p>
+                        <p><strong>Evaluation Period:</strong> January - February 2026</p>
+                        <p><strong>Dataset:</strong> 136 multi-source verified historical scenarios</p>
+                    </div>
+                    <div class="paper-abstract">
+                        <h4>Abstract</h4>
+                        <p>Large Language Models are increasingly being considered for deployment in safety-critical military applications. However, current benchmarks suffer from structural blindspots that systematically overestimate model capabilities in real-world tactical scenarios. Existing frameworks typically ignore strict legal constraints based on International Humanitarian Law (IHL), omit edge computing limitations, lack robustness testing for fog of war, and inadequately evaluate explicit reasoning. To address these vulnerabilities, we present <strong>WARBENCH</strong>, a comprehensive evaluation framework establishing a foundational tactical baseline alongside four distinct stress testing dimensions. Through a large scale empirical evaluation of nine leading models on 136 high-fidelity historical scenarios, we reveal severe structural flaws including baseline tactical reasoning collapse, extreme operational risks in edge-optimized models (legal violation rates approaching 70%), and catastrophic performance degradation under quantization and information loss.</p>
+                    </div>
+                    <div class="paper-actions">
+                        <a href="#" class="btn btn-primary">
+                            <span class="btn-icon">📄</span>
+                            Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">[WARBENCH]</span>
+                    <p>Military AI Safety Evaluation Framework</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#overview">Overview</a>
+                    <a href="#framework">Framework</a>
+                    <a href="#results">Results</a>
+                    <a href="#paper">Paper</a>
+                </div>
+                <div class="footer-disclaimer">
+                    <p>⚠ AI SAFETY RED-TEAMING EXERCISE</p>
+                    <p>This research is conducted strictly as an adversarial AI safety evaluation.<br>
+                    WARBENCH is designed to expose vulnerabilities, not enable operational deployment.</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2026 WARBENCH Research Group. All rights reserved.</p>
+                    <p class="classification-marking">UNCLASSIFIED // FOR PUBLIC RELEASE</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
