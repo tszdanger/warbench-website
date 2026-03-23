@@ -42,7 +42,8 @@ warbench.ai
 
 ```
 warbench-website/
-├── index.html          # Main HTML page
+├── index.html          # English version
+├── index.zh.html       # Chinese version
 ├── css/
 │   └── style.css       # Military-themed styles
 ├── js/
@@ -58,6 +59,8 @@ warbench-website/
 - 5 Key Findings from research
 - Performance matrix table
 - Paper abstract and download
+- **Bilingual support (English/中文)**
+- **Author information display**
 
 ## License
 

@@ -5,6 +5,19 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+    // Language Switcher
+    const langBtns = document.querySelectorAll('.lang-btn');
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            if (lang === 'zh') {
+                window.location.href = 'index.zh.html';
+            } else {
+                window.location.href = 'index.html';
+            }
+        });
+    });
+
     // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {

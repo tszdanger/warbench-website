@@ -1,105 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WARBENCH | Military AI Evaluation Framework</title>
+    <title>WARBENCH | 军事 AI 评估基准</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Radar Background Animation -->
+    <!-- 雷达背景动画 -->
     <div class="radar-overlay"></div>
 
-    <!-- Tactical Grid Background -->
+    <!-- 战术网格背景 -->
     <div class="tactical-grid"></div>
 
-    <!-- Navigation -->
+    <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
                 <span class="logo">[WARBENCH]</span>
-                <span class="classification">UNCLASSIFIED // FOR PUBLIC RELEASE</span>
+                <span class="classification">UNCLASSIFIED // 公开版本</span>
             </div>
             <ul class="nav-links">
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#framework">Framework</a></li>
-                <li><a href="#results">Results</a></li>
-                <li><a href="#models">Models</a></li>
-                <li><a href="#paper">Paper</a></li>
+                <li><a href="#overview">概览</a></li>
+                <li><a href="#framework">框架</a></li>
+                <li><a href="#results">结果</a></li>
+                <li><a href="#models">模型</a></li>
+                <li><a href="#paper">论文</a></li>
             </ul>
             <div class="lang-switch">
-                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="en">EN</button>
                 <span class="lang-separator">/</span>
-                <button class="lang-btn" data-lang="zh">中文</button>
+                <button class="lang-btn active" data-lang="zh">中文</button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero 区域 -->
     <header class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="status-badge">
                     <span class="pulse-dot"></span>
-                    EVALUATION COMPLETE
+                    评估完成
                 </div>
                 <h1 class="hero-title">
                     <span class="highlight">WARBENCH</span>
                 </h1>
                 <p class="hero-subtitle">
-                    A Comprehensive Benchmark for Evaluating LLMs in<br>
-                    <span class="highlight-text">Military Decision-Making</span>
+                    大语言模型军事决策能力<br>
+                    <span class="highlight-text">综合评估基准</span>
                 </p>
 
-                <!-- Authors -->
+                <!-- 作者信息 -->
                 <div class="authors-section">
                     <div class="author-item">
                         <span class="author-name">Zongjie Li</span>
-                        <span class="author-affiliation">Hong Kong University of Science and Technology</span>
+                        <span class="author-affiliation">香港科技大学</span>
                     </div>
                     <div class="author-item">
                         <span class="author-name">Chaozheng Wang</span>
-                        <span class="author-affiliation">Chinese University of Hong Kong</span>
+                        <span class="author-affiliation">香港中文大学</span>
                     </div>
                     <div class="author-item">
                         <span class="author-name">Pingchuan Ma</span>
-                        <span class="author-affiliation">Zhejiang University of Technology</span>
+                        <span class="author-affiliation">浙江工业大学</span>
                     </div>
                     <div class="author-item">
                         <span class="author-name">Yuchong Xie</span>
-                        <span class="author-affiliation">Hong Kong University of Science and Technology</span>
+                        <span class="author-affiliation">香港科技大学</span>
                     </div>
                     <div class="author-item">
                         <span class="author-name">Shuai Wang</span>
-                        <span class="author-affiliation">Hong Kong University of Science and Technology</span>
+                        <span class="author-affiliation">香港科技大学</span>
                     </div>
                 </div>
 
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-value">136</span>
-                        <span class="stat-label">Historical Scenarios</span>
+                        <span class="stat-label">历史场景</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-value">9</span>
-                        <span class="stat-label">Models Evaluated</span>
+                        <span class="stat-label">评估模型</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-value">5</span>
-                        <span class="stat-label">Evaluation Dimensions</span>
+                        <span class="stat-label">评估维度</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-value">69%</span>
-                        <span class="stat-label">Max Violation Rate</span>
+                        <span class="stat-label">最高违规率</span>
                     </div>
                 </div>
                 <div class="hero-cta">
                     <a href="#paper" class="btn btn-primary">
                         <span class="btn-icon">↓</span>
-                        Download Paper
+                        下载论文
                     </a>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                 <div class="radar-scan"></div>
                 <div class="tactical-display">
                     <div class="display-header">
-                        <span>TACTICAL ASSESSMENT IN PROGRESS</span>
+                        <span>战术评估进行中</span>
                     </div>
                     <div class="display-content">
                         <div class="progress-bar">
@@ -115,16 +115,16 @@
                         </div>
                         <div class="model-status">
                             <div class="model-row completed">
-                                <span>Closed-Source APIs</span>
-                                <span class="status-indicator success">EVALUATED</span>
+                                <span>闭源 API 模型</span>
+                                <span class="status-indicator success">已评估</span>
                             </div>
                             <div class="model-row completed">
-                                <span>Open-Source Large</span>
-                                <span class="status-indicator success">EVALUATED</span>
+                                <span>开源大模型</span>
+                                <span class="status-indicator success">已评估</span>
                             </div>
                             <div class="model-row completed">
-                                <span>Edge-Optimized Small</span>
-                                <span class="status-indicator success">EVALUATED</span>
+                                <span>边缘小模型</span>
+                                <span class="status-indicator success">已评估</span>
                             </div>
                         </div>
                     </div>
@@ -133,74 +133,74 @@
         </div>
     </header>
 
-    <!-- Alert Banner -->
+    <!-- 警告横幅 -->
     <div class="alert-banner">
         <div class="container">
             <span class="alert-icon">⚠</span>
-            <span class="alert-text">CRITICAL: All models exhibit non-trivial IHL compliance failures. Refusal rates decoupled from actual operational compliance.</span>
+            <span class="alert-text">关键发现：所有评估模型在国际人道法合规性测试中均表现出不可忽视的失败率</span>
         </div>
     </div>
 
-    <!-- Overview Section -->
+    <!-- 概览部分 -->
     <section id="overview" class="section overview">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">SECTION 01</span>
-                <h2>Mission Overview</h2>
+                <span class="section-tag">第一节</span>
+                <h2>任务概览</h2>
             </div>
             <div class="overview-grid">
                 <div class="overview-card">
                     <div class="card-icon">◈</div>
-                    <h3>Ecological Validity</h3>
-                    <p>136 exhaustive scenarios derived exclusively from post-WWII historical conflict data. Multi-source verification from Correlates of War, UCDP, and ICRC databases.</p>
+                    <h3>生态效度</h3>
+                    <p>136 个详尽场景，全部源自二战后真实历史冲突数据。多源验证来自战争相关性项目、UCDP 和 ICRC 数据库。</p>
                 </div>
                 <div class="overview-card">
                     <div class="card-icon">◈</div>
-                    <h3>Legal Constraints</h3>
-                    <p>First benchmark to enforce hard International Humanitarian Law boundaries. Tests proportionality, distinction, and precautions in attack.</p>
+                    <h3>法律约束</h3>
+                    <p>首个强制执行国际人道法硬性边界的基准测试。测试相称性、区分原则和攻击预防措施。</p>
                 </div>
                 <div class="overview-card">
                     <div class="card-icon">◈</div>
-                    <h3>Edge Deployment</h3>
-                    <p>Evaluates real-world hardware constraints: 4-bit/8-bit quantization, time pressure, and tactical edge computing limitations.</p>
+                    <h3>边缘部署</h3>
+                    <p>评估真实世界硬件限制：4 位/8 位量化、时间压力和战术边缘计算限制。</p>
                 </div>
                 <div class="overview-card">
                     <div class="card-icon">◈</div>
-                    <h3>Fog of War</h3>
-                    <p>Systematic information degradation testing: missing intelligence (20-80%) and contradictory reports from multiple sources.</p>
+                    <h3>战争迷雾</h3>
+                    <p>系统性信息降级测试：缺失情报 (20-80%) 和来自多个来源的矛盾报告。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Framework Section -->
+    <!-- 框架部分 -->
     <section id="framework" class="section framework">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">SECTION 02</span>
-                <h2>Evaluation Framework</h2>
+                <span class="section-tag">第二节</span>
+                <h2>评估框架</h2>
             </div>
 
             <div class="dimensions-container">
                 <div class="dimension-card active">
                     <div class="dimension-header">
                         <span class="dimension-number">D1</span>
-                        <h3>Baseline Tactical Competence</h3>
+                        <h3>基线战术能力</h3>
                     </div>
-                    <p>Foundational assessment across operational environments, conflict types, and force asymmetries.</p>
+                    <p>跨作战环境、冲突类型和力量不对称性的基础评估。</p>
                     <div class="metric-display">
-                        <span class="metric-label">Terrain Types</span>
+                        <span class="metric-label">地形类型</span>
                         <div class="metric-bars">
                             <div class="bar-group">
-                                <span>Open/Desert</span>
+                                <span>开阔/沙漠</span>
                                 <div class="bar"><div class="bar-fill" style="width: 94%"></div></div>
                             </div>
                             <div class="bar-group">
-                                <span>Urban</span>
+                                <span>城市</span>
                                 <div class="bar"><div class="bar-fill" style="width: 80%"></div></div>
                             </div>
                             <div class="bar-group">
-                                <span>Mountain/Forest</span>
+                                <span>山地/森林</span>
                                 <div class="bar"><div class="bar-fill" style="width: 81%"></div></div>
                             </div>
                         </div>
@@ -210,11 +210,11 @@
                 <div class="dimension-card">
                     <div class="dimension-header">
                         <span class="dimension-number">D2</span>
-                        <h3>Legal & Ethical Constraints</h3>
+                        <h3>法律与道德约束</h3>
                     </div>
-                    <p>IHL/LOAC compliance testing with expert-encoded rubrics and dual-annotation.</p>
+                    <p>使用专家编码规则和双重注释进行国际人道法/武装冲突法合规性测试。</p>
                     <div class="metric-display">
-                        <span class="metric-label">Top Compliance Scores</span>
+                        <span class="metric-label">最高合规分数</span>
                         <div class="bar-group">
                             <span>Claude Opus 4.6</span>
                             <div class="bar"><div class="bar-fill success" style="width: 92%"></div></div>
@@ -233,17 +233,17 @@
                 <div class="dimension-card">
                     <div class="dimension-header">
                         <span class="dimension-number">D3</span>
-                        <h3>Edge Deployment</h3>
+                        <h3>边缘部署</h3>
                     </div>
-                    <p>Quantization impact analysis (16-bit → 4-bit) with 5-second tactical threshold.</p>
+                    <p>量化影响分析 (16 位→4 位)，5 秒战术阈值测试。</p>
                     <div class="metric-display">
-                        <span class="metric-label">4-bit Performance Cliff</span>
+                        <span class="metric-label">4 位性能悬崖</span>
                         <div class="bar-group">
-                            <span>Phi-3 Mini (16→4 bit)</span>
+                            <span>Phi-3 Mini (16→4 位)</span>
                             <div class="bar"><div class="bar-fill danger" style="width: 12%"></div></div>
                         </div>
                         <div class="bar-group">
-                            <span>Legal Compliance Collapse</span>
+                            <span>法律合规性崩溃</span>
                             <div class="bar"><div class="bar-fill danger" style="width: 7.5%"></div></div>
                         </div>
                     </div>
@@ -252,17 +252,17 @@
                 <div class="dimension-card">
                     <div class="dimension-header">
                         <span class="dimension-number">D4</span>
-                        <h3>Fog of War</h3>
+                        <h3>战争迷雾</h3>
                     </div>
-                    <p>Information degradation: missing data (20-80%) and contradictory intelligence.</p>
+                    <p>信息降级：缺失数据 (20-80%) 和矛盾情报。</p>
                     <div class="metric-display">
-                        <span class="metric-label">Degradation at 60% Missing Info</span>
+                        <span class="metric-label">60% 信息缺失时性能</span>
                         <div class="bar-group">
                             <span>Claude Opus 4.6</span>
                             <div class="bar"><div class="bar-fill warning" style="width: 52%"></div></div>
                         </div>
                         <div class="bar-group">
-                            <span>Edge Models</span>
+                            <span>边缘模型</span>
                             <div class="bar"><div class="bar-fill danger" style="width: 8%"></div></div>
                         </div>
                     </div>
@@ -271,17 +271,17 @@
                 <div class="dimension-card">
                     <div class="dimension-header">
                         <span class="dimension-number">D5</span>
-                        <h3>Reasoning Chain-of-Thought</h3>
+                        <h3>思维链推理</h3>
                     </div>
-                    <p>Explicit reasoning architectures: standard vs. CoT mode comparison for safety alignment.</p>
+                    <p>显式推理架构：标准模式与思维链模式的安全对齐比较。</p>
                     <div class="metric-display">
-                        <span class="metric-label">CoT Improvement</span>
+                        <span class="metric-label">思维链改进</span>
                         <div class="bar-group">
-                            <span>Avg DQ Improvement</span>
+                            <span>平均决策质量改进</span>
                             <div class="bar"><div class="bar-fill success" style="width: 20%"></div></div>
                         </div>
                         <div class="bar-group">
-                            <span>Avg CS Improvement</span>
+                            <span>平均合规分数改进</span>
                             <div class="bar"><div class="bar-fill success" style="width: 38%"></div></div>
                         </div>
                     </div>
@@ -290,73 +290,65 @@
         </div>
     </section>
 
-    <!-- Alert Banner -->
-    <div class="alert-banner">
-        <div class="container">
-            <span class="alert-icon">⚠</span>
-            <span class="alert-text">CRITICAL: All models exhibit non-trivial IHL compliance failures. Refusal rates decoupled from actual operational compliance.</span>
-        </div>
-    </div>
-
-    <!-- Key Findings Section -->
+    <!-- 关键发现部分 -->
     <section class="section findings">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">SECTION 03</span>
-                <h2>Key Findings</h2>
+                <span class="section-tag">第三节</span>
+                <h2>关键发现</h2>
             </div>
             <div class="findings-container">
                 <div class="finding-card critical">
-                    <div class="finding-badge">FINDING 1</div>
-                    <h3>Structural Brittleness</h3>
-                    <p>Current LLMs exhibit extreme structural brittleness in tactical reasoning. While demonstrating functional baseline competence in conventional, symmetric environments, model decision quality systematically collapses when subjected to complex terrain (urban/mountainous) or high force asymmetry.</p>
+                    <div class="finding-badge">发现 1</div>
+                    <h3>结构性脆弱</h3>
+                    <p>当前大语言模型在战术推理中表现出极端的结构性脆弱。虽然在常规、对称环境中表现出功能性基线能力，但在复杂地形（城市/山地）或高力量不对称情况下，模型决策质量系统性崩溃。</p>
                 </div>
                 <div class="finding-card critical">
-                    <div class="finding-badge">FINDING 2</div>
-                    <h3>Legal Compliance Failure</h3>
-                    <p>Current LLMs fail to reliably respect IHL in tactical scenarios. Superficial alignment guardrails (i.e., refusal rates) are completely decoupled from actual operational compliance. Violations stem primarily from structural inability to identify contextual constraints.</p>
+                    <div class="finding-badge">发现 2</div>
+                    <h3>法律合规失败</h3>
+                    <p>当前大语言模型在战术场景中无法可靠遵守国际人道法。表面的一致性防护措施（即拒绝率）与实际操作合规性完全脱钩。违规行为主要源于无法自主识别上下文约束。</p>
                 </div>
                 <div class="finding-card critical">
-                    <div class="finding-badge">FINDING 3</div>
-                    <h3>Edge Deployment Non-Viable</h3>
-                    <p>Current edge-optimized models are practically non-viable for real-time tactical deployment. Aggressive weight quantization fails the 5-second threshold while triggering catastrophic collapse in decision quality and legal compliance. Ethical guardrails degrade faster than reasoning.</p>
+                    <div class="finding-badge">发现 3</div>
+                    <h3>边缘部署不可行</h3>
+                    <p>当前边缘优化模型在实际实时战术部署中不可行。激进的权重量化无法满足 5 秒战术阈值，同时引发决策质量和法律合规性的灾难性崩溃。道德防护机制比推理能力退化更快。</p>
                 </div>
                 <div class="finding-card warning">
-                    <div class="finding-badge">FINDING 4</div>
-                    <h3>Fog of War Vulnerability</h3>
-                    <p>LLMs suffer severe performance degradation under both missing and contradictory intelligence. Rather than adapting with operational caution, models respond to contextual deficits through dangerous heuristic simplification.</p>
+                    <div class="finding-badge">发现 4</div>
+                    <h3>战争迷雾脆弱性</h3>
+                    <p>大语言模型在缺失和矛盾情报下均遭受严重性能降级。模型不是通过操作谨慎或不确定性校准来适应，而是通过危险的启发式简化来应对上下文缺陷。</p>
                 </div>
                 <div class="finding-card info">
-                    <div class="finding-badge">FINDING 5</div>
-                    <h3>CoT as Safety Safeguard</h3>
-                    <p>Explicit reasoning steps consistently improve both tactical decision quality (+0.02) and ethical alignment (+3.8% compliance). By forcing models to state constraints prior to decision-making, CoT serves as an effective structural safeguard.</p>
+                    <div class="finding-badge">发现 5</div>
+                    <h3>思维链作为安全防护</h3>
+                    <p>显式推理步骤一致性地提高战术决策质量 (+0.02) 和道德对齐 (+3.8% 合规率)。通过强制模型在决策前陈述约束条件，思维链充当有效的结构性防护机制。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Results Section -->
+    <!-- 结果部分 -->
     <section id="results" class="section results">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">SECTION 04</span>
-                <h2>Performance Matrix</h2>
+                <span class="section-tag">第四节</span>
+                <h2>性能矩阵</h2>
             </div>
             <div class="results-table-wrapper">
                 <table class="results-table">
                     <thead>
                         <tr>
-                            <th>Model Category</th>
-                            <th>Model</th>
-                            <th>Decision Quality</th>
-                            <th>Compliance Score</th>
-                            <th>CIR</th>
-                            <th>Refusal Rate</th>
+                            <th>模型类别</th>
+                            <th>模型</th>
+                            <th>决策质量</th>
+                            <th>合规分数</th>
+                            <th>约束识别率</th>
+                            <th>拒绝率</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="category-row">
-                            <td rowspan="3">Closed-Source APIs</td>
+                            <td rowspan="3">闭源 API 模型</td>
                             <td>Claude Opus 4.6</td>
                             <td><span class="score excellent">0.84</span></td>
                             <td><span class="score excellent">92.0%</span></td>
@@ -378,7 +370,7 @@
                             <td>10.3%</td>
                         </tr>
                         <tr class="category-row">
-                            <td rowspan="3">Open-Source Large</td>
+                            <td rowspan="3">开源大模型</td>
                             <td>DeepSeek-V3.2</td>
                             <td><span class="score good">0.70</span></td>
                             <td><span class="score good">82.2%</span></td>
@@ -400,7 +392,7 @@
                             <td>5.1%</td>
                         </tr>
                         <tr class="category-row">
-                            <td rowspan="3">Edge-Optimized Small</td>
+                            <td rowspan="3">边缘优化小模型</td>
                             <td>Qwen3.5-4B</td>
                             <td><span class="score poor">0.19</span></td>
                             <td><span class="score critical">38.5%</span></td>
@@ -427,16 +419,16 @@
         </div>
     </section>
 
-    <!-- Models Section -->
+    <!-- 模型部分 -->
     <section id="models" class="section models">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">SECTION 05</span>
-                <h2>Evaluated Models</h2>
+                <span class="section-tag">第五节</span>
+                <h2>评估模型</h2>
             </div>
             <div class="models-grid">
                 <div class="model-category">
-                    <h3>Closed-Source APIs</h3>
+                    <h3>闭源 API 模型</h3>
                     <ul class="model-list">
                         <li><span class="model-name">Claude Opus 4.6</span><span class="model-provider">Anthropic</span></li>
                         <li><span class="model-name">GPT-5.4 Pro</span><span class="model-provider">OpenAI</span></li>
@@ -444,7 +436,7 @@
                     </ul>
                 </div>
                 <div class="model-category">
-                    <h3>Open-Source Large</h3>
+                    <h3>开源大模型</h3>
                     <ul class="model-list">
                         <li><span class="model-name">DeepSeek-V3.2</span><span class="model-provider">DeepSeek</span></li>
                         <li><span class="model-name">Qwen3.5-397B-A17B</span><span class="model-provider">Alibaba</span></li>
@@ -452,7 +444,7 @@
                     </ul>
                 </div>
                 <div class="model-category">
-                    <h3>Edge-Optimized Small</h3>
+                    <h3>边缘优化小模型</h3>
                     <ul class="model-list">
                         <li><span class="model-name">Phi-3 Mini</span><span class="model-provider">Microsoft</span></li>
                         <li><span class="model-name">Qwen3.5-4B</span><span class="model-provider">Alibaba</span></li>
@@ -463,29 +455,29 @@
         </div>
     </section>
 
-    <!-- Paper Section -->
+    <!-- 论文部分 -->
     <section id="paper" class="section paper">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">SECTION 06</span>
-                <h2>Research Paper</h2>
+                <span class="section-tag">第六节</span>
+                <h2>研究论文</h2>
             </div>
             <div class="paper-content">
                 <div class="paper-info">
-                    <h3>WARBENCH: A Comprehensive Benchmark for Evaluating LLMs in Military Decision-Making</h3>
+                    <h3>WARBENCH: 大语言模型军事决策能力综合评估基准</h3>
                     <div class="paper-meta">
-                        <p><strong>Keywords:</strong> LLM Evaluation, Military AI, Ethical AI</p>
-                        <p><strong>Evaluation Period:</strong> January - February 2026</p>
-                        <p><strong>Dataset:</strong> 136 multi-source verified historical scenarios</p>
+                        <p><strong>关键词：</strong>大语言模型评估、军事 AI、道德 AI</p>
+                        <p><strong>评估周期：</strong>2026 年 1 月 -2 月</p>
+                        <p><strong>数据集：</strong>136 个多源验证历史场景</p>
                     </div>
                     <div class="paper-abstract">
-                        <h4>Abstract</h4>
-                        <p>Large Language Models are increasingly being considered for deployment in safety-critical military applications. However, current benchmarks suffer from structural blindspots that systematically overestimate model capabilities in real-world tactical scenarios. Existing frameworks typically ignore strict legal constraints based on International Humanitarian Law (IHL), omit edge computing limitations, lack robustness testing for fog of war, and inadequately evaluate explicit reasoning. To address these vulnerabilities, we present <strong>WARBENCH</strong>, a comprehensive evaluation framework establishing a foundational tactical baseline alongside four distinct stress testing dimensions. Through a large scale empirical evaluation of nine leading models on 136 high-fidelity historical scenarios, we reveal severe structural flaws including baseline tactical reasoning collapse, extreme operational risks in edge-optimized models (legal violation rates approaching 70%), and catastrophic performance degradation under quantization and information loss.</p>
+                        <h4>摘要</h4>
+                        <p>大语言模型正越来越多地被认为可部署于安全关键的军事应用中。然而，当前的评估基准存在结构性盲点，系统性地高估了模型在真实战术场景中的能力。现有框架通常忽略基于国际人道法的严格法律约束、省略边缘计算限制、缺乏战争迷雾鲁棒性测试，以及不充分评估显式推理。为解决这些漏洞，我们提出了<strong>WARBENCH</strong>，一个全面的评估框架，建立基础战术基线以及四个不同的压力测试维度。通过对 136 个高保真历史场景中的 9 个领先模型进行大规模实证评估，我们揭示了严重的结构性缺陷，包括基线战术推理崩溃、边缘优化模型中的极端操作风险（法律违规率接近 70%），以及量化和信息丢失下的灾难性性能退化。</p>
                     </div>
                     <div class="paper-actions">
                         <a href="#" class="btn btn-primary">
                             <span class="btn-icon">📄</span>
-                            Download PDF
+                            下载 PDF
                         </a>
                     </div>
                 </div>
@@ -493,28 +485,27 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="logo">[WARBENCH]</span>
-                    <p>Military AI Safety Evaluation Framework</p>
+                    <p>军事 AI 安全评估框架</p>
                 </div>
                 <div class="footer-links">
-                    <a href="#overview">Overview</a>
-                    <a href="#framework">Framework</a>
-                    <a href="#results">Results</a>
-                    <a href="#paper">Paper</a>
+                    <a href="#overview">概览</a>
+                    <a href="#framework">框架</a>
+                    <a href="#results">结果</a>
+                    <a href="#paper">论文</a>
                 </div>
                 <div class="footer-disclaimer">
-                    <p>⚠ AI SAFETY RED-TEAMING EXERCISE</p>
-                    <p>This research is conducted strictly as an adversarial AI safety evaluation.<br>
-                    WARBENCH is designed to expose vulnerabilities, not enable operational deployment.</p>
+                    <p>⚠ AI 安全红队演习</p>
+                    <p>本研究严格作为对抗性 AI 安全评估进行。<br>WARBENCH 旨在揭露漏洞，而非支持实际军事部署。</p>
                 </div>
                 <div class="footer-copyright">
-                    <p>&copy; 2026 WARBENCH Research Group. All rights reserved.</p>
-                    <p class="classification-marking">UNCLASSIFIED // FOR PUBLIC RELEASE</p>
+                    <p>© 2026 WARBENCH 研究组。保留所有权利。</p>
+                    <p class="classification-marking">UNCLASSIFIED // 公开版本</p>
                 </div>
             </div>
         </div>

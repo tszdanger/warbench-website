@@ -101,6 +101,39 @@ body {
     align-items: center;
 }
 
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid var(--mil-steel);
+    color: var(--text-secondary);
+    padding: 0.35rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    border-color: var(--mil-olive);
+    color: var(--mil-olive);
+}
+
+.lang-btn.active {
+    background: var(--mil-olive);
+    border-color: var(--mil-olive);
+    color: var(--text-primary);
+}
+
+.lang-separator {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
 .nav-brand {
     display: flex;
     flex-direction: column;
@@ -203,6 +236,39 @@ body {
     color: var(--text-secondary);
     margin-bottom: 2rem;
     line-height: 1.8;
+}
+
+/* Authors Section */
+.authors-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(47, 79, 47, 0.1);
+    border: 1px solid var(--mil-olive);
+    border-radius: 2px;
+}
+
+.author-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+}
+
+.author-name {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--mil-olive);
+    font-size: 0.95rem;
+}
+
+.author-affiliation {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .highlight-text {
@@ -902,11 +968,19 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .authors-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .overview-grid,
     .dimensions-container,
     .findings-container,
     .models-grid {
         grid-template-columns: 1fr;
+    }
+
+    .dimensions-container .dimension-card:last-child {
+        grid-column: span 1;
     }
 }
 
@@ -922,6 +996,10 @@ body {
     .hero-cta,
     .paper-actions {
         flex-direction: column;
+    }
+
+    .authors-section {
+        grid-template-columns: 1fr;
     }
 
     .section {
